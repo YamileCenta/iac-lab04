@@ -52,7 +52,7 @@ export const handler = async (event) => {
         }
 
         if (!fileBuffer || fileBuffer.length === 0) {
-            throw new Error("El cuerpo de la imagen está vacío");
+            throw new Error("Cuerpo de la imagen está vacío");
         }
 
         await s3.send(new PutObjectCommand({
@@ -67,7 +67,7 @@ export const handler = async (event) => {
             body: JSON.stringify({ message: "Imagen recibida", file: fileName })
         };
     } catch (err) {
-        console.error("ERROR CRITICO:", err.message);
+        console.error("ERROR:", err.message);
         return {
             statusCode: 500,
             body: JSON.stringify({ error: err.message, stack: err.stack })
