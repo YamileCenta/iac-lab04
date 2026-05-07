@@ -1,7 +1,7 @@
 # Procesamiento de la imagen
 data "archive_file" "crop_zip" {
   type        = "zip"
-  source_dir  = "${path.module}/../../src/lambdas/crop"
+  source_dir  = "${path.module}/../src/lambdas/crop"
   output_path = "${path.module}/crop_function.zip"
 }
 

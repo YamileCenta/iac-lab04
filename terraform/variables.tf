@@ -7,7 +7,7 @@ variable "aws_region" {
 variable "project_name" {
   description = "Nombre base para la nomenclatura de recursos"
   type        = string
-  default     = "processor-image"
+  default     = "ProcesasorImagen"
 }
 
 locals {

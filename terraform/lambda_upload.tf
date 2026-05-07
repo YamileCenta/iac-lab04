@@ -1,7 +1,7 @@
 # Carga de imagenes
 data "archive_file" "upload_zip" {
   type        = "zip"
-  source_dir  = "${path.module}/../../src/lambdas/upload"
+  source_dir  = "${path.module}/../src/lambdas/upload"
   output_path = "${path.module}/upload_function.zip"
 }
 
